@@ -28,6 +28,8 @@ After the docker containers are spin up, the following command should be execute
 where DATABASE_USERNAME and DATABASE_PASSWORD are properties which should be replaced with values from
 the `docker-compose.yml` file.
 
+The application will listen to the requests on port `8090`.
+
 ## Postman API collection
 
 To try out the backend API there is a Postman collection, located in
