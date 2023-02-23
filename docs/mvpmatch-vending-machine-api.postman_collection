@@ -1,0 +1,375 @@
+{
+	"info": {
+		"_postman_id": "08a875c3-3285-48be-bf20-4a16a1d6b70b",
+		"name": "MVPMATCH-VENDING-MACHINE-API",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Get User",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "default"
+					}
+				],
+				"url": {
+					"raw": "{{SERVICE_URL}}/user",
+					"host": [
+						"{{SERVICE_URL}}"
+					],
+					"path": [
+						"user"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Create User",
+			"request": {
+				"auth": {
+					"type": "noauth"
+				},
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "default"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"username\": \"user3\",\r\n    \"password\": \"password3\",\r\n    \"role\": \"BUYER\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{SERVICE_URL}}/user",
+					"host": [
+						"{{SERVICE_URL}}"
+					],
+					"path": [
+						"user"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Update User",
+			"request": {
+				"auth": {
+					"type": "noauth"
+				},
+				"method": "PUT",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "default"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": ""
+				},
+				"url": {
+					"raw": "{{SERVICE_URL}}/user",
+					"host": [
+						"{{SERVICE_URL}}"
+					],
+					"path": [
+						"user"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Logout All Users",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "default"
+					}
+				],
+				"url": {
+					"raw": "{{SERVICE_URL}}/logout/all",
+					"host": [
+						"{{SERVICE_URL}}"
+					],
+					"path": [
+						"logout",
+						"all"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get Products",
+			"request": {
+				"auth": {
+					"type": "noauth"
+				},
+				"method": "GET",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "default"
+					}
+				],
+				"url": {
+					"raw": "{{SERVICE_URL}}/product",
+					"host": [
+						"{{SERVICE_URL}}"
+					],
+					"path": [
+						"product"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get Product by productId",
+			"request": {
+				"auth": {
+					"type": "noauth"
+				},
+				"method": "GET",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "default"
+					}
+				],
+				"url": {
+					"raw": "{{SERVICE_URL}}/product/6e967352-8800-49d6-b794-fac57425cf8c",
+					"host": [
+						"{{SERVICE_URL}}"
+					],
+					"path": [
+						"product",
+						"6e967352-8800-49d6-b794-fac57425cf8c"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Create Product",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "default"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"productName\": \"product3\",\r\n  \"cost\": \"10\",\r\n  \"amountAvailable\": \"5\"\r\n}"
+				},
+				"url": {
+					"raw": "{{SERVICE_URL}}/product",
+					"host": [
+						"{{SERVICE_URL}}"
+					],
+					"path": [
+						"product"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Update Product",
+			"request": {
+				"method": "PUT",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "default"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"cost\": \"30\"\r\n}"
+				},
+				"url": {
+					"raw": "{{SERVICE_URL}}/product/8671ea8d-8863-464b-923c-b81a339b4cdb",
+					"host": [
+						"{{SERVICE_URL}}"
+					],
+					"path": [
+						"product",
+						"8671ea8d-8863-464b-923c-b81a339b4cdb"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Delete Product",
+			"request": {
+				"method": "DELETE",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "default"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": ""
+				},
+				"url": {
+					"raw": "{{SERVICE_URL}}/product/8671ea8d-8863-464b-923c-b81a339b4cdb",
+					"host": [
+						"{{SERVICE_URL}}"
+					],
+					"path": [
+						"product",
+						"8671ea8d-8863-464b-923c-b81a339b4cdb"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "User with role BUYER deposit",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "default"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"deposit\": 120\r\n}"
+				},
+				"url": {
+					"raw": "{{SERVICE_URL}}/deposit",
+					"host": [
+						"{{SERVICE_URL}}"
+					],
+					"path": [
+						"deposit"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "User with role BUYER buy",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "default"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"productId\": \"6e967352-8800-49d6-b794-fac57425cf8c\",\r\n  \"amount\": 1\r\n}"
+				},
+				"url": {
+					"raw": "{{SERVICE_URL}}/buy",
+					"host": [
+						"{{SERVICE_URL}}"
+					],
+					"path": [
+						"buy"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "User with role BUYER reset deposit",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "default"
+					}
+				],
+				"url": {
+					"raw": "{{SERVICE_URL}}/reset",
+					"host": [
+						"{{SERVICE_URL}}"
+					],
+					"path": [
+						"reset"
+					]
+				}
+			},
+			"response": []
+		}
+	],
+	"auth": {
+		"type": "basic",
+		"basic": [
+			{
+				"key": "password",
+				"value": "password3",
+				"type": "string"
+			},
+			{
+				"key": "username",
+				"value": "user3",
+				"type": "string"
+			}
+		]
+	},
+	"event": [
+		{
+			"listen": "prerequest",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		},
+		{
+			"listen": "test",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		}
+	],
+	"variable": [
+		{
+			"key": "SERVICE_URL",
+			"value": "http://localhost:8090"
+		}
+	]
+}
